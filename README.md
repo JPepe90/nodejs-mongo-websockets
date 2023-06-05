@@ -107,3 +107,21 @@ Los detalles de los errores no deben estar a disposicion del cliente sino del eq
 ## Rutas, Controladores y Bases de Datos
 
 Las peticiones vienen desde Internet hacia nuestro servidor. Quien recibe las peticiones es server.js y se encarga de verificar que las peticiones sean correctas y se encarga de cargar toda la informacion importante de nuestro servidor (DB, cabeceras, etc). Luego el archivo server.js pasa la informacion al archivo routes.js, encargado de gestionar las rutas y llamar al componente adecuado para la misma.
+
+Los componentes se componen de 3 capas separadas en 3 archivos js:
+
+- Network --> HTTP (Red)
+- Controller --> Logica de Negocio (servicio)
+- Store --> BD (Almacenamiento)
+
+### Modulo Response
+
+Se crea un modulo response.js que sera el encargdo de devolver las peticiones exitosas desde los componentes al cliente con un formato unificado. Esta tambien se trata de una capaa de Red.
+
+## Separando el Proyecto en secciones
+
+Creamos la carpeta components y dentro la carpeta messages.
+
+## Mongoose
+
+Utilizaremos la libreria mongoose para armar los esquemas con los que manejaremos los datos con nuestra BD.
